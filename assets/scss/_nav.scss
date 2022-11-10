@@ -36,11 +36,13 @@
         width: 100%;
     }
 
-
     .navbar-brand {
         text-transform: none;
         text-align: middle;
 
+        &__name {
+          font-weight: $font-weight-bold;
+        }
         .nav-link {
             display: inline-block;
             margin-right: -30px;
@@ -58,13 +60,7 @@
         font-weight: $font-weight-medium; // NK - adjusted for use with multiple Noto Sans weights
     }
 
-    .td-search-input {
-        border: none;
-        color: $navbar-dark-color; // NK - copied from Docsy v0.1.0 file
-        @include placeholder {
-            color: $navbar-dark-color;
-        }
-    }
+    // For .td-search__input styling, see _search.scss
 
     .dropdown {
         min-width: 100px;
@@ -121,7 +117,7 @@
             font-variant: normal;
             text-rendering: auto;
             -webkit-font-smoothing: antialiased;
-            font-family: "Font Awesome 5 Free";
+            font-family: $font-awesome-font-name;
             font-weight: 900; 
             content: "\f0d9";
             padding-left: 0.5em;
@@ -145,12 +141,12 @@ nav.foldable-nav {
     &#td-section-nav {
         position: relative;
     }
-    
+
     &#td-section-nav label {
         margin-bottom: 0;
         width: 100%;
     }
-    
+
     .td-sidebar-nav__section, .with-child ul {
         list-style: none;
         padding: 0;
@@ -159,7 +155,7 @@ nav.foldable-nav {
         overflow: hidden; // NK - custom edit
         white-space: nowrap; // NK - custom edit
     }
-    
+
     .ul-1 > li {
         padding-left: 1.5em;
     }
@@ -177,8 +173,8 @@ nav.foldable-nav {
 
     input[type=checkbox] { display: none; }
 
-    .with-child, .without-child { 
-        position: relative; 
+    .with-child, .without-child {
+        position: relative;
         padding-left: 1.5em;
     }
 
@@ -188,7 +184,7 @@ nav.foldable-nav {
         font-variant: normal;
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;
-        font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0da";
+        font-family: $font-awesome-font-name; font-weight: 900; content: "\f0da";
         position: absolute;
         left: 0.1em;
         padding-left: 0.4em;
@@ -201,27 +197,27 @@ nav.foldable-nav {
         }
     }
 
-    .ul-1 .with-child > input:checked ~ label:before { 
+    .ul-1 .with-child > input:checked ~ label:before {
         color: $primary;
         transform: rotate(90deg);
         transition: transform 0s; // NK - disables animation transition time, now switch is instant
     }
 
     .with-child ul { margin-top: 0.1em; }
-    
-}    
+
+}
 
 @media (hover: hover) and (pointer: fine) {
-    
+
     nav.foldable-nav {
 
-        .ul-1 .with-child > label:hover:before { 
+        .ul-1 .with-child > label:hover:before {
             color: $primary;
             transform: rotate(30deg);
             transition: transform 0s; // NK - disables animation transition time, now switch is instant
         }
 
-        .ul-1 .with-child > input:checked ~ label:hover:before { 
+        .ul-1 .with-child > input:checked ~ label:hover:before {
             color: $primary;
             transform: rotate(60deg) !important;
             transition: transform 0s; // NK - disables animation transition time, now switch is instant
