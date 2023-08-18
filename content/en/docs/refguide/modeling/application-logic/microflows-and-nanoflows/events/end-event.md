@@ -28,11 +28,11 @@ The return value is the value that is returned to the flow that called the curre
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/events/end-event/return-value.png"   width="300"  >}}
 
-You can choose to return nothing, or to return, for example, a list, enumeration, or Boolean value:
-
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/events/end-event/end-event-type.png" >}}
-
 The return value can be entered as an [expression](/refguide/expressions/).
+
+You can choose to return nothing, or to return, for example, a list, enumeration, or Boolean value. After you type an expression you will see a button that will allow you to update the return type:
+
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/events/end-event/end-event-form.png" >}}
 
 {{% alert color="info" %}}
 If you are calling a microflow from another microflow, note that a *calling* microflow cannot control what is returned. It is controlled by the *called* microflow. 
